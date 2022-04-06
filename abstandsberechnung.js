@@ -71,6 +71,14 @@ function compareSecondColumn(a, b) {
     }
 }
 
+// Textausgabe von aufsteigend sortierten citiesDistance als Text mit Zeilenumbruch in HTML eingefügt 
+var ausgabeAB = "";
+for(var i = 0; i < citiesDistance.length; i++) {
+    ausgabeAB = ausgabeAB + citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "m" + "<br />";
+}
+
+console.log(" ");
+console.log(ausgabeAB);
 console.log(" ");
 console.log(" ");
 // citiesDistance in Console ausgeben
