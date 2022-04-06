@@ -9,9 +9,9 @@ sortiert bezuglich der Distanz zum ’point’ dargestellt werden. ¨
 Eine Mathematische Beschreibung zur Berechnung der Entfernung
 zweier Punkte kann unter www.movable-type.co.uk/scripts/latlong.html
 gefunden werden.
-Die Funktionen sind zu kommentieren, und zus¨atzlich mit Zeilenkommentaren zu versehen, welche komplexere innere Abl¨aufe der Funktionen beschreiben.
+Die Funktionen sind zu kommentieren, und zusätzlich mit Zeilenkommentaren zu versehen, welche komplexere innere Abläufe der Funktionen beschreiben.
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-Da die Ubungen h ¨ ¨aufig auf den Ergebnissen der vorherigen aufbauen, ist es empfohlen den Code auf eine Weise anzufertigen in der er sich
-in sp¨ateren Versionen leicht ¨andern oder weiterverwenden l¨asst!
-Erstellt bitte bei Fragen oder Unklarheiten einen Forenpost im Learnweb so dass diese dort, und gegebenenfalls in der darauf folgenden Sitzung, beantwortet werden k¨onnen.
-Kreative L¨osungsans¨atze und Codeschnipsel k¨onnen nominiert werden in einer kurzen Pr¨asentation von den Verfassern vorgestellt zu werden. Durch die Vorstellung wird Schokolade gewonnen.
+Da die Ubungen häufig auf den Ergebnissen der vorherigen aufbauen, ist es empfohlen den Code auf eine Weise anzufertigen in der er sich
+in späteren Versionen leicht ¨andern oder weiterverwenden lässt!
+Erstellt bitte bei Fragen oder Unklarheiten einen Forenpost im Learnweb so dass diese dort, und gegebenenfalls in der darauf folgenden Sitzung, beantwortet werden können.
+Kreative Lösungsansätze und Codeschnipsel können nominiert werden in einer kurzen Präsentation von den Verfassern vorgestellt zu werden. Durch die Vorstellung wird Schokolade gewonnen.
