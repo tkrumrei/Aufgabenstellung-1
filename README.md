@@ -5,7 +5,7 @@ geographischen Standort im gleichen Format beschreibt.
 Das Ziel der Ubung 1 ist es eine HTML-Seite zu erstellen, welche für
 den in ‘point.js‘ beschriebenen Standort die Distanzen zu allen Punkten
 aus ‘cities.js‘ berechnet und auflistet. Die Punkte sollen aufsteigend
-sortiert bezuglich der Distanz zum ’point’ dargestellt werden. ¨
+sortiert bezüglich der Distanz zum ’point’ dargestellt werden. ¨
 Eine Mathematische Beschreibung zur Berechnung der Entfernung
 zweier Punkte kann unter www.movable-type.co.uk/scripts/latlong.html
 gefunden werden.

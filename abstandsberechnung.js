@@ -15,6 +15,7 @@ var cities = [
     [10.7522, 59.9139] //Oslo
   ];
 
+// Array für die Ausgabe erstellen
 var citiesDistance = [
     ["Köln", 0.0],
     ["Amsterdam", 0.0],
@@ -29,35 +30,37 @@ var citiesDistance = [
     ["Oslo", 0.0],
 ];
 
+// Punkt point für Formel
 var lat1 = point[1];
 var lon1 = point[0];
 
-//
+// Berechnung der Abstände von Städten zu Punkt mit for-Schleife 
 for(var i = 0; i < cities.length; i++) {
     var lat2 = cities[i][1];
     var lon2 = cities[i][0];
     
     const R = 6371e3; // metres
-const φ1 = lat1 * Math.PI/180; // φ, λ in radians
-const φ2 = lat2 * Math.PI/180;
-const Δφ = (lat2-lat1) * Math.PI/180;
-const Δλ = (lon2-lon1) * Math.PI/180;
+    const φ1 = lat1 * Math.PI/180; // φ, λ in radians
+    const φ2 = lat2 * Math.PI/180;
+    const Δφ = (lat2-lat1) * Math.PI/180;
+    const Δλ = (lon2-lon1) * Math.PI/180;
 
-const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+    const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
           Math.cos(φ1) * Math.cos(φ2) *
           Math.sin(Δλ/2) * Math.sin(Δλ/2);
-const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
-const d = R * c; // in metres
+    const d = R * c; // in metres
 
-citiesDistance[i][1] = d;
-// gucken ob es funktioniert
-console.log(citiesDistance[i][0] + ": " + citiesDistance[i][1] + "m");
+    citiesDistance[i][1] = d;
+    // gucken ob es funktioniert
+    console.log(citiesDistance[i][0] + ": " + citiesDistance[i][1] + "m");
 
 }
 
 // Array citiesDistance aufsteigend sortieren
-citiesDistance.sort(compareSecondColumn);
+//Quelle: https://stackoverflow.com/questions/16096872/how-to-sort-2-dimensional-array-by-column-value
+citiesDistance.sort(compareSecondColumn); 
 
 function compareSecondColumn(a, b) {
     if (a[1] === b[1]) {
@@ -70,12 +73,7 @@ function compareSecondColumn(a, b) {
 
 console.log(" ");
 console.log(" ");
-
+// citiesDistance in Console ausgeben
 for(var i = 0; i < citiesDistance.length; i++){
     console.log(citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "m");
 }
-
-
-
-
-
