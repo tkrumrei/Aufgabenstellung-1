@@ -50,11 +50,13 @@ for(var i = 0; i < cities.length; i++) {
           Math.sin(Δλ/2) * Math.sin(Δλ/2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
-    const d = R * c; // in metres
+    var d = Math.round((R * c / 1000) * 10) / 10; // in km umgerechnet und auf eine Nachkommastelle gerundet
+    // Distanzen runden auf zwei Nachkommastellen
 
+    // In array cities distance eintragen
     citiesDistance[i][1] = d;
     // gucken ob es funktioniert
-    console.log(citiesDistance[i][0] + ": " + citiesDistance[i][1] + "m");
+    console.log(citiesDistance[i][0] + ": " + citiesDistance[i][1] + "km");
 
 }
 
@@ -74,7 +76,7 @@ function compareSecondColumn(a, b) {
 // Textausgabe von aufsteigend sortierten citiesDistance als Text mit Zeilenumbruch in HTML eingefügt 
 var ausgabeAB = "";
 for(var i = 0; i < citiesDistance.length; i++) {
-    ausgabeAB = ausgabeAB + citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "m" + "<br />";
+    ausgabeAB = ausgabeAB + citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "km" + "<br />";
 }
 
 console.log(" ");
