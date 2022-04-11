@@ -15,7 +15,7 @@ var citiesDistance = [
     ["Oslo", 0.0],
 ];
 
-// Punkt point für Formel
+// Punkt point als ersten Punkt für Formel speichern
 var lat1 = point[1];
 var lon1 = point[0];
 
@@ -37,39 +37,22 @@ for(var i = 0; i < cities.length; i++) {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
     var d = Math.round((R * c / 1000) * 10) / 10; // in km umgerechnet und auf eine Nachkommastelle gerundet
-    // Distanzen runden auf zwei Nachkommastellen
 
     // In array cities distance eintragen
     citiesDistance[i][1] = d;
-    // Zur Kontrolle in Console ausgeben
-    console.log(citiesDistance[i][0] + ": " + citiesDistance[i][1] + "km");
-
 }
 
 // Array citiesDistance aufsteigend sortieren
-//Quelle: https://stackoverflow.com/questions/16096872/how-to-sort-2-dimensional-array-by-column-value
-citiesDistance.sort(compareSecondColumn); 
-
-function compareSecondColumn(a, b) {
-    if (a[1] === b[1]) {
-        return 0;
-    }
-    else {
-        return (a[1] < b[1]) ? -1 : 1;
-    }
+//Quelle: https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/array/sort
+citiesDistance.sort(zweiteSpalteSortieren);
+// Funktion für zweite Spalte sortieren 
+//gibt entweder -1, 0 oder 1 zurück und sort() tauscht dann die beiden ausgewählten Spalten
+function zweiteSpalteSortieren (a, b){
+    return a[1] - b[1];
 }
 
 // Textausgabe von aufsteigend sortierten citiesDistance als Text mit Zeilenumbruch (in HTML) eingefügen
 var ausgabeAB = "";
 for(var i = 0; i < citiesDistance.length; i++) {
     ausgabeAB = ausgabeAB + citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "km" + "<br />";
-}
-
-console.log(" ");
-console.log(ausgabeAB);
-console.log(" ");
-console.log(" ");
-// citiesDistance in Console ausgeben
-for(var i = 0; i < citiesDistance.length; i++){
-    console.log(citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "km");
 }
