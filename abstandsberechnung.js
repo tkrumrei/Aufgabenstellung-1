@@ -85,5 +85,5 @@ console.log(" ");
 console.log(" ");
 // citiesDistance in Console ausgeben
 for(var i = 0; i < citiesDistance.length; i++){
-    console.log(citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "m");
+    console.log(citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "km");
 }
