@@ -1,21 +1,6 @@
 "use strict";
 
-var point = [7.595737,51.969508];
-var cities = [
-    [6.9570, 50.9367], //Köln
-    [4.9041, 52.3676], //Amsterdam
-    [9.4797, 51.3127], //Kassel
-    [2.1686, 41.3874], //Barcelona
-    [10.1815, 36.8065], //Tunis
-    [135.7681,35.0116], //Kyoto
-    [26.1025, 44.4268], //Bucharest
-    [15.4395, 47.0707], //Graz
-    [31.2357, 30.0444], //Kairo
-    [6.2603, 53.3498], //Dublin
-    [10.7522, 59.9139] //Oslo
-  ];
-
-// Array für die Ausgabe erstellen
+// Array für die Ausgabe erstellen mit Name der Stadt und Abstand
 var citiesDistance = [
     ["Köln", 0.0],
     ["Amsterdam", 0.0],
@@ -36,6 +21,7 @@ var lon1 = point[0];
 
 // Berechnung der Abstände von Städten zu Punkt mit for-Schleife 
 for(var i = 0; i < cities.length; i++) {
+    // Punkte von cities-Array als zweiten Punkt speichern 
     var lat2 = cities[i][1];
     var lon2 = cities[i][0];
     
@@ -55,7 +41,7 @@ for(var i = 0; i < cities.length; i++) {
 
     // In array cities distance eintragen
     citiesDistance[i][1] = d;
-    // gucken ob es funktioniert
+    // Zur Kontrolle in Console ausgeben
     console.log(citiesDistance[i][0] + ": " + citiesDistance[i][1] + "km");
 
 }
@@ -73,7 +59,7 @@ function compareSecondColumn(a, b) {
     }
 }
 
-// Textausgabe von aufsteigend sortierten citiesDistance als Text mit Zeilenumbruch in HTML eingefügt 
+// Textausgabe von aufsteigend sortierten citiesDistance als Text mit Zeilenumbruch (in HTML) eingefügen
 var ausgabeAB = "";
 for(var i = 0; i < citiesDistance.length; i++) {
     ausgabeAB = ausgabeAB + citiesDistance[i][0] + ": " +  citiesDistance[i][1] + "km" + "<br />";
